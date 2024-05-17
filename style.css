@@ -16,6 +16,7 @@ body{
     height: 70%;
     border: 2px solid black;
     text-align: center;
+    background-color: lightgreen;
 }
 
 .header{
