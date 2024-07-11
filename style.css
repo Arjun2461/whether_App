@@ -1,101 +1,113 @@
-*{
-    margin: 0px;
-    padding: 0px;
-}
-
-body{
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, #6a11cb, #2575fc);
+    color: white;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    width: 100%;
+    margin: 0;
 }
 
-.box{
-    width: 350px;
-    height: 70%;
-    border: 2px solid black;
+.box {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 10px;
     text-align: center;
-    background-color: lightgreen;
+    width: 300px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
-.header{
-    margin-top: 30px;
+.header {
+    margin-bottom: 20px;
+}
+
+.search-box {
     display: flex;
     justify-content: center;
-    align-items: center; 
+    margin-bottom: 20px;
 }
 
-input{
-    padding: 10px 20px;
-    border-radius: 5px;
+#city-input {
+    padding: 10px;
     border: none;
-    box-shadow: 0px 0px 6px rgba(0,0,0,0.2);
-    width: 60%;
-}
-
-button{
-    margin-left: 10px;
-    padding: 5px 10px;
-    font-size: 1rem;
-    border: none;
-    box-shadow: 0px 0px 6px rgba(0,0,0,0.2);
-    background-color: aqua;
     border-radius: 5px;
+    margin-right: 10px;
+    width: 150px;
 }
 
-.whether-body{
-    /* display: flex;
-    align-items:center ;
+#search-btn {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #4caf50;
+    color: white;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
     justify-content: center;
-    flex-direction: column; */
-    text-align: center;
-    margin: 10px 0px;
 }
 
-.whether-body img{
-    width: 40%;  
-    margin-bottom: 10px;   
+.weather-body {
+    display: none;
+    margin-top: 20px;
 }
 
-
-.whether-body h1{
-    font-size: 40px;
-    font-weight: 500;
+.weatherimg {
+    width: 100px;
+    margin: 10px auto;
 }
 
-.cityname{
+.temp {
+    font-size: 2rem;
+}
+
+.cityname {
+    font-size: 1.5rem;
+}
+
+.description {
+    font-size: 1rem;
     text-transform: capitalize;
 }
 
-.whether-body h2{
-    font-size: 20px;
-    font-weight: 500;
-    margin-top: 10px
+.footer {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
 }
 
-.footer{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 20px;
-    margin-top:30px;
-}
-.col{
+.col {
     display: flex;
     align-items: center;
-    text-align: left;
 }
 
-.col img{
-    width: 40px;
+.col img {
+    width: 30px;
     margin-right: 10px;
 }
 
-
-
-.humidity , .Wind{
-    font-size: 28px;
-    margin-top: -6px;
+@media (max-width: 768px) {
+    .box {
+        width: 90%;
+    }
 }
 
+@media (max-width: 480px) {
+    .search-box {
+        flex-direction: column;
+    }
+
+    #city-input {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    .footer {
+        flex-direction: column;
+    }
+
+    .col {
+        margin-bottom: 10px;
+    }
+}
